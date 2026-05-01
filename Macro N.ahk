@@ -1,5 +1,6 @@
 ﻿SendMode Input
-CoordMode, Pixel, Screen
+CoordMode, Pixel, Window
+CoordMode, Mouse, Window
 
 F1::
 Pause, Off
