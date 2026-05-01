@@ -1,0 +1,77 @@
+Anleitung:
+Benutze die Ahk-Datei für Remotedesktop Zwecke. Die Exe-Datei sollte auch funktionieren. Ein grosser Teil der Anleitung kann auch aus dem folgenden Video entnommen werden: https://www.youtube.com/watch?v=8DR9lIN8uxg
+
+1. Autohotkey installieren
+- Öffne https://www.autohotkey.com/ und installiere Autohotkey
+
+2. RDP konfigurieren
+- Öffne https://github.com/stascorp/rdpwrap/releases/tag/v1.6.2
+- Lade die ZIP- Datei runter und extrahiere sie
+- Führe Install.bat aus
+- Bei Windows Defender Meldung:
+- Virus and Threat Protection -> Current Threats -> RDPWrap -> Allow on device
+- Suche "Services" in Windows und führe als Admin aus
+- Suche "Remotedesktopdienste" und beende es
+- Öffne https://github.com/sebaxakerhtc/rdpwrap.ini
+- Unter Code, lade die ZIP-Datei runter
+- Alles extrahieren
+- Öffne den Ordner
+- Kopiere rdpwrap.ini
+- Öffne Explorer unter dem Pfad C:\Program Files\RDP Wrapper
+- Ersetze rdpwrap.ini
+- Öffne wieder "Services" und starte "Remotedesktopdienste" erneut
+- Öffne RDPConf.exe
+- Es sollte 3/3 Grün sein und "fully supported" stehen
+	- Wichtig: Windows Home kann zu Problemen führen
+- Aktiviere "Remotedesktop" unter Settings -> System -> Remotedesktop
+
+3. Neuen Benutzer erstellen
+- Drücke Windows + R
+- Gib "control userpasswords2" ein
+- Drücke "Add"
+- Füge einen neuen Account hinzu
+- Anmelden ohne Microsoft Konto
+- Ausfüllen und Fertigstellen
+- Wähle den Account aus und drücke Eigenschaften
+- Unter "Group membership" setze ihn auf Admin
+
+4. RDP installieren und einrichten
+- Öffne https://www.donkz.nl/downloads/
+- Installiere "Remote Desktop Plus" und öffne die Datei
+- Fülle aus: Computers: 127.0.0.2
+- Drücke auf "Manage Profiles"
+- Drücke "Add"
+- Füge den gleichen Nutzernamen und Passwort des neuen Windows Account ein
+- Speicher
+- Drücke den Pfeil neben "Connect"
+- Wähle "Manage Favorites"
+- Drücke "Add"
+- Der Name ist egal
+- Füge ein: /v:127.0.0.2 /i:macro2 /title:"macro n" /nodrives /nosound /nowallpaper /o:"keyboardhook:i:0" /w:1920 /h:1200
+	- Wichtig: Gleicher Port, Gleicher Name wie RDP-Profil
+- Wähle die Check-Box aus
+- Drücke "Ok"
+- Drücke "Create Shortcut"
+
+5. RDP ausführen
+- Suche nach dem neu kreierten Shortcut und führe ihn aus
+ -Wähle "Zwischenablage" aus
+- Drücke "Verbinden"
+- Richte evtl. Windows ein für den neuen Nutzer
+- Installiere Discord
+- Lade die "Macro N.ahk" Datei herunter
+- Drücke Windows + Tab
+- Ziehe den Remote Desktop in Desktop 2
+- Rechtsklicke die Titelleiste des Fensters und wähle Vollbild
+
+6. Anleitung Macro
+- Öffne das Macro
+- Tasten:
+	- F1: Start
+	- F2: Pausiert/Entpausiert
+	- Esc: Ende
+- Stelle sicher, dass die gewünschte Nachricht als letztes kopiert wurde oder in der Zwischenablage steht
+- Nach dem Starten des Macros kannst du mit Windows + Tab wieder heraustabben
+	- Wichtig: Um Bugs zu vermeiden, stelle sicher, dass du deinen Mauszeiger nicht bewegst, bevor du Windows + Tab gedrückt hast
+
+Glückwunsch! Du hast es geschafft!
